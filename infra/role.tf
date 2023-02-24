@@ -50,6 +50,8 @@ resource "aws_iam_role_policy" "beanstalk_policy" {
             "sns:Publish",
             "logs:*",
             "s3:*",
+            "cloudwatch:PutMetricData",
+            "elasticbeanstalk:PutInstanceStatistics"
         ]
         Effect   = "Allow"
         Resource = "*"
